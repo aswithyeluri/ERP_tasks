@@ -28,8 +28,8 @@ app.use(bodyParser.json());
 app.use(cors("*"));
 
 mongoose.connect(
-    "mongodb+srv://vignanuser:QasQik7m.m2C5Lw@vignanuniversitycluster.tr5ru.mongodb.net/211FA04369",
-    { useNewUrlParser: true, useUnifiedTopology: true }
+    //mongodb cluster
+    '', {useNewUrlParser: true, useUnifiedTopology: true}
 );
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
