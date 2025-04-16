@@ -1,53 +1,3 @@
-// const express = require("express");
-// const mongoose = require("mongoose");
-// const bodyParser = require("body-parser");
-// const cors = require("cors");
-
-// // MongoDB connection
-// mongoose
-//     .connect(
-//         `mongodb+srv://${username}:${password}@cluster0.u6jxllb.mongodb.net/${dbName}?retryWrites=true&w=majority&appName=Cluster0`
-//     )
-//     .then(() => console.log("Connected to MongoDB"))
-//     .catch((err) => console.error("Connection error:", err));
-
-// // Schema
-// const registrationSchema = new mongoose.Schema({
-//     firstName: String,
-//     lastName: String,
-//     email: String,
-//     mobileNumber: String,
-//     dateOfBirth: String,
-//     country: String,
-//     category: String,
-//     course: String,
-//     program: String,
-//     specialization: String,
-// });
-// const registration = mongoose.model("registration", registrationSchema);
-
-// const app = express();
-// app.use(cors());
-// app.use(bodyParser.json());
-
-// // Routes
-// app.post("/api/register", async (req, res) => {
-//     try {
-//         const registrationData = new Registration(req.body); // Renamed to match the model
-//         await registrationData.save();
-//         res.status(201).send({ message: "Registration successful" });
-//     } catch (error) {
-//         console.error(error);
-//         res.status(500).send({ message: "Error registering student" });
-//     }
-// });
-
-// // Start server
-// const PORT = 5000;
-// app.listen(PORT, () =>
-//     console.log(`Server running on http://localhost:${PORT}`)
-// );
-
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -55,7 +5,8 @@ const cors = require("cors");
 
 // MongoDB connection string
 const mongoURI =
-    "mongodb+srv://vignanuser:QasQik7m.m2C5Lw@vignanuniversitycluster.tr5ru.mongodb.net/vignan_university?retryWrites=true&w=majority";
+    // place your cluster
+    "";
 mongoose
     .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log("Connected to MongoDB"))
